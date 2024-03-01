@@ -3,12 +3,10 @@ from tkinter import Tk, BOTH, Canvas
 
 class Window:
     def __init__(self, width, height):
-        self.width = width
-        self.height = height
         self.root = Tk()
-        self.title = "Maze"
+        self.title = "Maze Solver"
         self.root.title(self.title)
-        self.canvas = Canvas(self.root, width=width, height=height)
+        self.canvas = Canvas(self.root, bg="white", width=width, height=height)
         self.canvas.pack(fill=BOTH, expand=1)
         self.is_running = False
         self.root.protocol("WM_DELETE_WINDOW", self.close)
@@ -25,6 +23,7 @@ class Window:
             if self.is_running:
                 self.redraw()
                 self.root.after(1000, loop)
+        print("window closed")
         loop()
 
     def close(self):
