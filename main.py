@@ -13,7 +13,7 @@ def main():
     window = Window(screen_x, screen_y)
 
     maze = Maze(margin, margin, num_rows, num_cols,
-                cell_size_x, cell_size_y, window)
+                cell_size_x, cell_size_y, window, 10)
 
     window.wait_for_close()
 
