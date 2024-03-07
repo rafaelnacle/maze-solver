@@ -26,25 +26,25 @@ class Cell:
             self._window.draw_line(line)
         else:
             line = Line(Point(x1, y1), Point(x1, y2))
-            self._window.draw_line(line, "white")
+            self._window.draw_line(line, "#F7B2AD")
         if self.has_top_wall:
             line = Line(Point(x1, y1), Point(x2, y1))
             self._window.draw_line(line)
         else:
             line = Line(Point(x1, y1), Point(x2, y1))
-            self._window.draw_line(line, "white")
+            self._window.draw_line(line, "#F7B2AD")
         if self.has_right_wall:
             line = Line(Point(x2, y1), Point(x2, y2))
             self._window.draw_line(line)
         else:
             line = Line(Point(x2, y1), Point(x2, y2))
-            self._window.draw_line(line, "white")
+            self._window.draw_line(line, "#F7B2AD")
         if self.has_bottom_wall:
             line = Line(Point(x1, y2), Point(x2, y2))
             self._window.draw_line(line)
         else:
             line = Line(Point(x1, y2), Point(x2, y2))
-            self._window.draw_line(line, "white")
+            self._window.draw_line(line, "#F7B2AD")
 
     def draw_move(self, to_cell, undo=False):
         if self._window is None:
@@ -55,7 +55,7 @@ class Cell:
         to_x_mid = (to_cell._x1 + to_cell._x2) / 2
         to_y_mid = (to_cell._y1 + to_cell._y2) / 2
 
-        fill_color = "red"
+        fill_color = "#9ABCA7"
         if undo:
             fill_color = "gray"
 
