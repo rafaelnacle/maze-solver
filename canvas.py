@@ -6,7 +6,7 @@ class Window:
         self.__root = Tk()
         self.__root.title("Maze Solver")
         self.__root.protocol("WM_DELETE_WINDOW", self.close)
-        self.__canvas = Canvas(self.__root, bg="white",
+        self.__canvas = Canvas(self.__root, bg="#F7B2AD",
                                height=height, width=width)
         self.__canvas.pack(fill=BOTH, expand=1)
         self.__running = False
@@ -21,7 +21,7 @@ class Window:
             self.redraw()
         print("window closed...")
 
-    def draw_line(self, line, fill_color="black"):
+    def draw_line(self, line, fill_color="#333232"):
         line.draw(self.__canvas, fill_color)
 
     def close(self):
